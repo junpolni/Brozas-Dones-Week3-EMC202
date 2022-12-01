@@ -13,4 +13,15 @@ public class Item
 
     public ItemType itemType;
     public int amount;
+
+    public Sprite GetSprite()
+    {
+        switch (itemType)
+        {
+            default:
+            case ItemType.Equipment:    return ItemAssets.Instance.EquipmentSprite;
+            case ItemType.Consumable:   return ItemAssets.Instance.ConsumableSprite;
+            case ItemType.Misc:         return ItemAssets.Instance.MiscSprite;
+        }
+    }
 }

@@ -15,18 +15,21 @@ public class Control_InventoryUI : MonoBehaviour
 
     public void AddEquipment()
     {
+        inventory.AddItem(new Item { itemType = Item.ItemType.Equipment, amount = 1});
         Debug.Log("Equipment added.");
 
     }
 
     public void AddConsumable()
     {
+        inventory.AddItem(new Item { itemType = Item.ItemType.Consumable, amount = 1});
         Debug.Log("Consumable added.");
 
     }
 
     public void AddMisc()
     {
+        inventory.AddItem(new Item { itemType = Item.ItemType.Misc, amount = 1});
         Debug.Log("Misc added.");
     }
 }
