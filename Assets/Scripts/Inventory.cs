@@ -1,34 +1,69 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
-public class Inventory 
+public class Inventory : MonoBehaviour
 {
+    //public event EventHandler OnItemListChanged;
 
-    public event EventHandler OnItemListChanged;
+    public static event Action<List<InventoryItem>> OnInventoryChange;
 
-    private List<Item> itemList;
+    public List<InventoryItem> inventory = new List<InventoryItem>();
+    private Dictionary<ItemData, InventoryItem> itemDictionary = new Dictionary<ItemData, InventoryItem>();
 
-    public Inventory()
+    private void OnEnable()
     {
-        itemList = new List<Item>();
-
-        /*AddItem(new Item { itemType = Item.ItemType.Equipment, amount = 1});
-        AddItem(new Item { itemType = Item.ItemType.Consumable, amount = 1});
-        AddItem(new Item { itemType = Item.ItemType.Misc, amount = 1}); */
-
-        Debug.Log(itemList.Count);
-
+        DiamondSword.OnDiamondSwordCollected += AddNonStack;
+        Chicken_HPRegen.OnChickenCollected += Add;
+        BrownBook.OnBrownBookCollected += AddNonStack;
+    }
+    
+    public void Add(ItemData itemData)
+    {
+        if(itemDictionary.TryGetValue(itemData, out InventoryItem item))
+        {
+            item.AddToStack();
+            Debug.Log($"{item.itemData.displayName} total stack is now {item.stackSize}");
+            OnInventoryChange?.Invoke(inventory);
+        }
+        else
+        {
+            InventoryItem newItem = new InventoryItem(itemData);
+            inventory.Add(newItem);
+            itemDictionary.Add(itemData, newItem);
+            Debug.Log($"Added {itemData.displayName} to the inventory for the first time.");
+            OnInventoryChange?.Invoke(inventory);
+        }
     }
 
-    public void AddItem(Item item) {
-        itemList.Add(item);
-        OnItemListChanged?.Invoke(this, EventArgs.Empty);
+    public void Remove(ItemData itemData)
+    {
+        if(itemDictionary.TryGetValue(itemData, out InventoryItem item))
+        {
+            item.RemoveFromStack();
+            if(item.stackSize == 0)
+            {
+                inventory.Remove(item);
+                itemDictionary.Remove(itemData);
+            }
+        }
     }
 
-    public List<Item> GetItemList()
+    public void AddNonStack(ItemData itemData)
     {
-        return itemList;
+        if(itemDictionary.TryGetValue(itemData, out InventoryItem item))
+        {
+            Debug.Log($"{item.itemData.displayName} is duplicated in the inventory.");
+            OnInventoryChange?.Invoke(inventory);
+        }
+        else
+        {
+            InventoryItem newItem = new InventoryItem(itemData);
+            inventory.Add(newItem);
+            itemDictionary.Add(itemData, newItem);
+            Debug.Log($"Added {itemData.displayName} to the inventory for the first time.");
+            OnInventoryChange?.Invoke(inventory);
+        }
     }
 }

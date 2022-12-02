@@ -999,7 +999,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minecraft_sprite_42
+      name: misc_sign
       rect:
         serializedVersion: 2
         x: 160
@@ -1041,7 +1041,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minecraft_sprite_44
+      name: misc_ironDoor
       rect:
         serializedVersion: 2
         x: 192
@@ -1209,7 +1209,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minecraft_sprite_52
+      name: equip_goldBoots
       rect:
         serializedVersion: 2
         x: 64
@@ -1818,7 +1818,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minecraft_sprite_81
+      name: equip_ironShovel
       rect:
         serializedVersion: 2
         x: 16
@@ -1944,7 +1944,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minecraft_sprite_87
+      name: cons_meat
       rect:
         serializedVersion: 2
         x: 112
@@ -2049,7 +2049,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minecraft_sprite_92
+      name: cons_cookie
       rect:
         serializedVersion: 2
         x: 192
@@ -2343,7 +2343,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minecraft_sprite_106
+      name: cons_beef
       rect:
         serializedVersion: 2
         x: 160
@@ -2406,7 +2406,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minecraft_sprite_109
+      name: cons_watermelon
       rect:
         serializedVersion: 2
         x: 208
@@ -4086,7 +4086,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minecraft_sprite_189
+      name: misc_flowerPot
       rect:
         serializedVersion: 2
         x: 208
@@ -4443,7 +4443,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minecraft_sprite_206
+      name: misc_painting
       rect:
         serializedVersion: 2
         x: 224
@@ -4842,7 +4842,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minecraft_sprite_225
+      name: equip_leatherArmor
       rect:
         serializedVersion: 2
         x: 16
@@ -7173,7 +7173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minecraft_sprite_336
+      name: equip_trident
       rect:
         serializedVersion: 2
         x: 0
@@ -8223,16 +8223,14 @@ TextureImporter:
       minecraft_sprite_95: 105130746
       minecraft_sprite_190: -125603496
       minecraft_sprite_263: 1501526415
-      minecraft_sprite_189: -900949176
       minecraft_sprite_133: 11561990
       minecraft_sprite_198: -530705223
-      minecraft_sprite_109: 37965668
+      minecraft_sprite_145: -915253427
       minecraft_sprite_43: 113432388
       minecraft_sprite_208: -162472191
       minecraft_sprite_161: -1096618909
       minecraft_sprite_147: 533493331
       minecraft_sprite_158: -2028611783
-      minecraft_sprite_145: -915253427
       minecraft_sprite_222: 1610942531
       minecraft_sprite_380: 191027999
       minecraft_sprite_362: 1724291291
@@ -8265,10 +8263,11 @@ TextureImporter:
       minecraft_sprite_170: 60175430
       minecraft_sprite_168: 1201813455
       minecraft_sprite_91: 462407303
-      minecraft_sprite_44: 104778062
       minecraft_sprite_338: -1931726057
+      misc_flowerPot: -900949176
       minecraft_sprite_49: -2127321633
       minecraft_sprite_316: -848484792
+      cons_meat: 1985391615
       minecraft_sprite_78: -742693017
       minecraft_sprite_302: 313498354
       minecraft_sprite_108: 1874315031
@@ -8299,6 +8298,7 @@ TextureImporter:
       minecraft_sprite_379: 2079317070
       equip_diamond_sword: 1866603995
       minecraft_sprite_330: 1353725294
+      equip_ironShovel: -770214562
       minecraft_sprite_260: 375807432
       minecraft_sprite_41: -585376740
       minecraft_sprite_283: 1645395988
@@ -8338,17 +8338,17 @@ TextureImporter:
       minecraft_sprite_282: 422625585
       minecraft_sprite_4: 1570858837
       minecraft_sprite_144: -953364818
-      minecraft_sprite_228: -514023154
-      minecraft_sprite_87: 1985391615
+      minecraft_sprite_236: -205896687
       minecraft_sprite_102: 72978285
       minecraft_sprite_243: 1197952503
       minecraft_sprite_51: 1484219178
-      minecraft_sprite_236: -205896687
+      minecraft_sprite_358: 484671234
+      minecraft_sprite_228: -514023154
       minecraft_sprite_163: 1461217232
       minecraft_sprite_13: -397387777
       minecraft_sprite_193: -265110392
-      minecraft_sprite_358: 484671234
       minecraft_sprite_85: 1218217437
+      misc_painting: 1457522840
       minecraft_sprite_17: -1453860226
       minecraft_sprite_280: -586162011
       minecraft_sprite_29: -318140566
@@ -8358,6 +8358,7 @@ TextureImporter:
       minecraft_sprite_130: -1526896071
       minecraft_sprite_72: -433491906
       minecraft_sprite_269: -1548164680
+      cons_watermelon: 37965668
       minecraft_sprite_361: 1528406846
       minecraft_sprite_153: 1343666908
       minecraft_sprite_279: -280549562
@@ -8366,21 +8367,18 @@ TextureImporter:
       minecraft_sprite_342: 561223333
       minecraft_sprite_107: -1464404901
       minecraft_sprite_135: -1712045926
-      minecraft_sprite_42: -503852938
-      minecraft_sprite_103: -1878503437
       minecraft_sprite_323: -736441860
+      minecraft_sprite_103: -1878503437
       minecraft_sprite_7: -365233417
       minecraft_sprite_157: 951533552
       minecraft_sprite_360: 17394286
+      minecraft_sprite_369: 1061954475
       minecraft_sprite_262: 792278481
       minecraft_sprite_50: -805423076
-      minecraft_sprite_369: 1061954475
       minecraft_sprite_74: -472937866
       minecraft_sprite_303: 1666585283
-      minecraft_sprite_206: 1457522840
       minecraft_sprite_70: 241572840
       misc_book: 478591742
-      minecraft_sprite_81: -770214562
       minecraft_sprite_204: 1829168597
       minecraft_sprite_352: -1796787853
       minecraft_sprite_320: 1111959203
@@ -8406,7 +8404,6 @@ TextureImporter:
       minecraft_sprite_162: -331561419
       minecraft_sprite_268: 694493205
       minecraft_sprite_125: 456453277
-      minecraft_sprite_52: -48820834
       minecraft_sprite_46: 543994247
       minecraft_sprite_212: -1342752476
       minecraft_sprite_274: 1706567952
@@ -8420,6 +8417,7 @@ TextureImporter:
       minecraft_sprite_213: -386395380
       minecraft_sprite_227: 779833649
       minecraft_sprite_240: 1178139823
+      cons_beef: 1903736090
       minecraft_sprite_374: -218559241
       minecraft_sprite_146: -1611525537
       minecraft_sprite_209: 751880769
@@ -8453,7 +8451,6 @@ TextureImporter:
       minecraft_sprite_372: -304304871
       minecraft_sprite_355: 678663353
       minecraft_sprite_11: -1847442965
-      minecraft_sprite_225: -1230180779
       minecraft_sprite_136: -2126716856
       minecraft_sprite_218: -34678181
       minecraft_sprite_66: 1724556138
@@ -8479,10 +8476,13 @@ TextureImporter:
       minecraft_sprite_267: 419179899
       minecraft_sprite_350: -23451828
       minecraft_sprite_131: -1500801810
+      misc_ironDoor: 104778062
       minecraft_sprite_259: -1614792858
       minecraft_sprite_344: 1684581454
+      equip_goldBoots: -48820834
       minecraft_sprite_8: -280006883
       minecraft_sprite_34: -1483223241
+      cons_cookie: -774281853
       minecraft_sprite_291: 622310581
       minecraft_sprite_245: -232965332
       minecraft_sprite_373: 1706055660
@@ -8503,7 +8503,6 @@ TextureImporter:
       minecraft_sprite_294: -769313342
       misc_disc: -1426479704
       minecraft_sprite_321: 782807736
-      minecraft_sprite_92: -774281853
       minecraft_sprite_363: 1996547924
       minecraft_sprite_304: 1970829279
       minecraft_sprite_38: -38957262
@@ -8525,9 +8524,7 @@ TextureImporter:
       minecraft_sprite_187: -1506153685
       minecraft_sprite_257: 1361253112
       cons_potion_1: -1372184672
-      minecraft_sprite_106: 1903736090
       minecraft_sprite_137: 1060777578
-      minecraft_sprite_336: 276593452
       minecraft_sprite_39: 649198261
       minecraft_sprite_272: 477965318
       minecraft_sprite_292: -1393918558
@@ -8542,6 +8539,7 @@ TextureImporter:
       minecraft_sprite_331: 1180318159
       minecraft_sprite_177: 1493819888
       minecraft_sprite_258: -972040655
+      equip_trident: 276593452
       minecraft_sprite_261: -1072771214
       minecraft_sprite_200: -1204472720
       minecraft_sprite_335: 2003521460
@@ -8586,10 +8584,12 @@ TextureImporter:
       minecraft_sprite_367: -1275554983
       minecraft_sprite_169: -295170087
       minecraft_sprite_167: 534929916
+      equip_leatherArmor: -1230180779
       minecraft_sprite_340: 1601997040
       minecraft_sprite_128: -1714811835
       minecraft_sprite_365: 60412432
       minecraft_sprite_53: 1483158826
+      misc_sign: -503852938
       minecraft_sprite_47: 631110305
       minecraft_sprite_82: -69757346
       minecraft_sprite_150: 2091831428
