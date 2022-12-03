@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    //public event EventHandler OnItemListChanged;
-
+    
     public static event Action<List<InventoryItem>> OnInventoryChange;
 
     public List<InventoryItem> inventory = new List<InventoryItem>();
@@ -14,9 +13,27 @@ public class Inventory : MonoBehaviour
 
     private void OnEnable()
     {
+        // Equipments
         DiamondSword.OnDiamondSwordCollected += AddNonStack;
+        Crossbow.OnCrossbowCollected += AddNonStack;
+        DiamondPickaxe.OnPickaxeCollected += AddNonStack;
+        LeatherArmor.OnLeatherArmorCollected += AddNonStack;
+        GoldBoots.OnGoldBootsCollected += AddNonStack;
+
+        // Consumables
         Chicken_HPRegen.OnChickenCollected += Add;
+        Cookie_RESIncrease.OnCookieCollected += Add;
+        RedPotion_ATKBuff.OnRedPotionCollected += Add;
+        Watermelon_HPRegen.OnWatermelonCollected += Add;
+        GrayPotion_CRBuff.OnGrayPotionCollected += Add;
+
+        // Misc
         BrownBook.OnBrownBookCollected += AddNonStack;
+        Painting.OnPaintingCollected += AddNonStack;
+        Sign.OnSignCollected += AddNonStack;
+        Disc.OnDiscCollected += AddNonStack;
+        FlowerPot.OnFlowerPotCollected += AddNonStack;
+
     }
     
     public void Add(ItemData itemData)

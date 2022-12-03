@@ -3855,7 +3855,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minecraft_sprite_178
+      name: cons_potionRed
       rect:
         serializedVersion: 2
         x: 32
@@ -8222,6 +8222,7 @@ TextureImporter:
       minecraft_sprite_275: -1457164718
       minecraft_sprite_95: 105130746
       minecraft_sprite_190: -125603496
+      cons_potionRed: 1529412932
       minecraft_sprite_263: 1501526415
       minecraft_sprite_133: 11561990
       minecraft_sprite_198: -530705223
@@ -8347,8 +8348,8 @@ TextureImporter:
       minecraft_sprite_163: 1461217232
       minecraft_sprite_13: -397387777
       minecraft_sprite_193: -265110392
-      minecraft_sprite_85: 1218217437
       misc_painting: 1457522840
+      minecraft_sprite_85: 1218217437
       minecraft_sprite_17: -1453860226
       minecraft_sprite_280: -586162011
       minecraft_sprite_29: -318140566
@@ -8372,9 +8373,9 @@ TextureImporter:
       minecraft_sprite_7: -365233417
       minecraft_sprite_157: 951533552
       minecraft_sprite_360: 17394286
-      minecraft_sprite_369: 1061954475
       minecraft_sprite_262: 792278481
       minecraft_sprite_50: -805423076
+      minecraft_sprite_369: 1061954475
       minecraft_sprite_74: -472937866
       minecraft_sprite_303: 1666585283
       minecraft_sprite_70: 241572840
@@ -8416,8 +8417,8 @@ TextureImporter:
       minecraft_sprite_253: 2140445046
       minecraft_sprite_213: -386395380
       minecraft_sprite_227: 779833649
-      minecraft_sprite_240: 1178139823
       cons_beef: 1903736090
+      minecraft_sprite_240: 1178139823
       minecraft_sprite_374: -218559241
       minecraft_sprite_146: -1611525537
       minecraft_sprite_209: 751880769
@@ -8456,7 +8457,6 @@ TextureImporter:
       minecraft_sprite_66: 1724556138
       minecraft_sprite_186: 809815217
       minecraft_sprite_9: -995961795
-      minecraft_sprite_178: 1529412932
       minecraft_sprite_296: -1502552532
       minecraft_sprite_69: 1598287232
       minecraft_sprite_264: -391370691
