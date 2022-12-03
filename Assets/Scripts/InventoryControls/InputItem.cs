@@ -7,11 +7,8 @@ using TMPro;
 
 public class InputItem : MonoBehaviour
 {
-    public static event Action<List<ItemData>> OnItemAddedToInventory;
-    public List<ItemData> itemData = new List<ItemData>();
-
     public string itemName;
-    public TextMeshProUGUI inputField;
+    public TMP_InputField inputField;
     public TextMeshProUGUI textDisplay;
 
     // Equipment Items
@@ -19,7 +16,7 @@ public class InputItem : MonoBehaviour
     [SerializeField] private Crossbow crossbow;
     [SerializeField] private DiamondPickaxe diamondPickaxe;
     [SerializeField] private LeatherArmor leatherArmor;
-    [SerializeField] private GoldBoots goldBoots;
+    [SerializeField] private GoldBoots goldBoots; 
 
     // Consumable Items
     [SerializeField] private Chicken_HPRegen chickenHPRegen;
@@ -34,50 +31,134 @@ public class InputItem : MonoBehaviour
     [SerializeField] private Sign sign;
     [SerializeField] private Disc disc;
     [SerializeField] private FlowerPot flowerPot;
-    
 
     //, StringComparison.InvariantCultureIgnoreCase)
 
     public void AddItemName()
     {
-        itemName = inputField.text;
-
-        if (itemName.Equals("DiamondSword"))
+        itemName = inputField.GetComponent<TMP_InputField>().text;
+        
+        if (itemName.Equals("diamond sword", StringComparison.InvariantCultureIgnoreCase))
         {
-            //DiamondSword newDiamondSword = Instantiate(diamondSword);
-            diamondSword.Collect();
-
             textDisplay.text = $"Successfully added {itemName}";
             Debug.Log($"Successfully added {itemName}");
-            OnItemAddedToInventory?.Invoke(itemData);
+
+            diamondSword.Collect();    
         }
-        else if (itemName.Equals("Chicken"))
+        else if (itemName.Equals("diamond pickaxe", StringComparison.InvariantCultureIgnoreCase))
         {
+            textDisplay.text = $"Successfully added {itemName}";
+            Debug.Log($"Successfully added {itemName}");
+
+            diamondPickaxe.Collect();
+
+        }
+        else if (itemName.Equals("crossbow", StringComparison.InvariantCultureIgnoreCase))
+        {
+            textDisplay.text = $"Successfully added {itemName}";
+            Debug.Log($"Successfully added {itemName}");
+
+            crossbow.Collect();
+
+        }
+        else if (itemName.Equals("leather armor", StringComparison.InvariantCultureIgnoreCase))
+        {
+            textDisplay.text = $"Successfully added {itemName}";
+            Debug.Log($"Successfully added {itemName}");
+
+            leatherArmor.Collect();
+
+        }
+        else if (itemName.Equals("gold boots", StringComparison.InvariantCultureIgnoreCase))
+        {
+            textDisplay.text = $"Successfully added {itemName}";
+            Debug.Log($"Successfully added {itemName}");
+
+            goldBoots.Collect();
+
+        }
+        else if (itemName.Equals("chicken", StringComparison.InvariantCultureIgnoreCase))
+        {
+            textDisplay.text = $"Successfully added {itemName}";
+            Debug.Log($"Successfully added {itemName}");
+
             chickenHPRegen.Collect();
 
+        }
+        else if (itemName.Equals("cookie", StringComparison.InvariantCultureIgnoreCase))
+        {
             textDisplay.text = $"Successfully added {itemName}";
             Debug.Log($"Successfully added {itemName}");
-            OnItemAddedToInventory?.Invoke(itemData);
-        } 
-        else if (itemName.Equals("Brown Book"))
-        {
-            brownBook.Collect();
 
+            cookieRESIncrease.Collect();
+
+        }
+        else if (itemName.Equals("red potion", StringComparison.InvariantCultureIgnoreCase))
+        {
             textDisplay.text = $"Successfully added {itemName}";
             Debug.Log($"Successfully added {itemName}");
-            OnItemAddedToInventory?.Invoke(itemData);
-        } 
-        else if (itemName.Equals(""))
+
+            redPotionATKBuff.Collect();
+
+        }
+        else if (itemName.Equals("watermelon", StringComparison.InvariantCultureIgnoreCase))
         {
-            textDisplay.text = "Enter a valid item";
-            Debug.Log("Enter a valid item");
+            textDisplay.text = $"Successfully added {itemName}";
+            Debug.Log($"Successfully added {itemName}");
+
+            watermelonHPRegen.Collect();
+
+        }
+        else if (itemName.Equals("gray potion", StringComparison.InvariantCultureIgnoreCase))
+        {
+            textDisplay.text = $"Successfully added {itemName}";
+            Debug.Log($"Successfully added {itemName}");
+
+            grayPotionCRBuff.Collect();
+
+        }
+        else if (itemName.Equals("brown book", StringComparison.InvariantCultureIgnoreCase))
+        {
+            textDisplay.text = $"Successfully added {itemName}";
+            Debug.Log($"Successfully added {itemName}");
+
+            brownBook.Collect();
+        }
+        else if (itemName.Equals("painting", StringComparison.InvariantCultureIgnoreCase))
+        {
+            textDisplay.text = $"Successfully added {itemName}";
+            Debug.Log($"Successfully added {itemName}");
+
+            painting.Collect();
+        }
+        else if (itemName.Equals("sign", StringComparison.InvariantCultureIgnoreCase))
+        {
+            textDisplay.text = $"Successfully added {itemName}";
+            Debug.Log($"Successfully added {itemName}");
+
+            sign.Collect();
+        }
+        else if (itemName.Equals("disc", StringComparison.InvariantCultureIgnoreCase))
+        {
+            textDisplay.text = $"Successfully added {itemName}";
+            Debug.Log($"Successfully added {itemName}");
+
+            disc.Collect();
+        }
+        else if (itemName.Equals("flower pot", StringComparison.InvariantCultureIgnoreCase))
+        {
+            textDisplay.text = $"Successfully added {itemName}";
+            Debug.Log($"Successfully added {itemName}");
+
+            flowerPot.Collect();
         }
         else
         {
-            textDisplay.text = $"{inputField.text} is an invalid Item.";
-            Debug.Log($"{inputField.text} is an invalid Item.");
-        }     
-    }
+            textDisplay.text = $"{itemName} is not available";
+            Debug.Log("Invalid item.");
 
+        }
+
+    }
 
 }
