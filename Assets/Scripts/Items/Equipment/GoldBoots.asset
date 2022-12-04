@@ -15,3 +15,4 @@ MonoBehaviour:
   displayName: Gold Boots
   itemDescription: boots made of gold
   icon: {fileID: -48820834, guid: 678ffacf795799a41808016115db97ff, type: 3}
+  Type: 1

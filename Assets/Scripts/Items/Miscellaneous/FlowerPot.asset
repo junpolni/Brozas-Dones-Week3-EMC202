@@ -15,3 +15,4 @@ MonoBehaviour:
   displayName: Flower Pot
   itemDescription: a flower pot bought from a flower shop
   icon: {fileID: -900949176, guid: 678ffacf795799a41808016115db97ff, type: 3}
+  Type: 2

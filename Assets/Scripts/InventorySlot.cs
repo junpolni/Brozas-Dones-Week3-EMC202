@@ -9,6 +9,8 @@ public class InventorySlot : MonoBehaviour
     public Image icon;
     public TextMeshProUGUI stackText;
 
+    public InventoryItem Item;
+
     public void ClearSlot()
     {
         icon.enabled = false;
@@ -22,6 +24,8 @@ public class InventorySlot : MonoBehaviour
             ClearSlot();
             return;
         }
+
+        Item = item;
 
         icon.enabled = true;
         stackText.enabled = true;

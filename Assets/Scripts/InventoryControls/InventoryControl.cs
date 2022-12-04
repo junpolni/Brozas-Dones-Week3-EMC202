@@ -8,8 +8,7 @@ public class InventoryControl : MonoBehaviour
     private ItemDragHandler draggableItem;
 
     [SerializeField] DropItemArea dropItemArea;
-    [SerializeField] private DiamondSword diamondSword;
-    
+    [SerializeField] private Chicken_HPRegen chickenHPRegen;
 
     void Start()
     {
@@ -22,7 +21,7 @@ public class InventoryControl : MonoBehaviour
     {
         if (draggableItem == null) return;
 
-        Destroy(diamondSword);
+        chickenHPRegen.Consume();
 
         Debug.Log("Item Dropped.");
 

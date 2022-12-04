@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerDownHandler
 {
     public Image image;
 
@@ -38,5 +39,40 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         transform.localPosition = Vector3.zero;
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
+    }
+
+    private int clicks = 0;
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        clicks++;
+        if (clicks >= 2)
+        {
+            clicks = 0;
+            
+            var obj = eventData.pointerEnter;
+            Debug.Log(obj.name);
+            
+            var parent = obj.GetComponentInParent<InventorySlot>();
+
+            var itemName = string.Empty;
+            var itemDesc = string.Empty;
+
+            switch (parent.Item.itemData.Type)
+            {
+                case ItemType.Consumables:
+                    //you can do something consume heree
+                case ItemType.Equipment:
+                     itemName = parent.Item.itemData.displayName;
+                     itemDesc = parent.Item.itemData.itemDescription;
+                    break;
+                case ItemType.Miscellaneous:
+                    break;
+            }
+
+            DoubleClickDebug.Instance.Display(itemName, itemDesc);
+            
+            // ICollectible interactable = obj.GetComponent<ICollectible>();
+            // interactable.Interact();
+        }
     }
 }

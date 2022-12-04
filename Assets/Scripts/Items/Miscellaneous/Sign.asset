@@ -15,3 +15,4 @@ MonoBehaviour:
   displayName: Sign
   itemDescription: a sign that says you should bring cats for the party
   icon: {fileID: -503852938, guid: 678ffacf795799a41808016115db97ff, type: 3}
+  Type: 2

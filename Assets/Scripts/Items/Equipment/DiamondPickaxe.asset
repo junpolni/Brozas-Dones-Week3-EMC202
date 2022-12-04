@@ -15,3 +15,4 @@ MonoBehaviour:
   displayName: Diamond Pickaxe
   itemDescription: pickaxe made of diamonds
   icon: {fileID: 302165716, guid: 678ffacf795799a41808016115db97ff, type: 3}
+  Type: 1

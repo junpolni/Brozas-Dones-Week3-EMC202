@@ -15,3 +15,4 @@ MonoBehaviour:
   displayName: Brown Book
   itemDescription: a brown book that contains spells
   icon: {fileID: 478591742, guid: 678ffacf795799a41808016115db97ff, type: 3}
+  Type: 2

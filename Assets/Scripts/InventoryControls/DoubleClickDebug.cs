@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,8 @@ using UnityEngine.UI;
 
 public class DoubleClickDebug : MonoBehaviour
 {
+	public static DoubleClickDebug Instance;
+	
 	private const float DOUBLE_CLICK_TIME = .2f;
 
 	private float lastClickTime;
@@ -36,9 +39,20 @@ public class DoubleClickDebug : MonoBehaviour
     [SerializeField] private Disc disc;
     [SerializeField] private FlowerPot flowerPot;
 
-	void Update()
+    private void Awake()
+    {
+	    Instance = this;
+    }
+
+    public void Display(string name, string description)
+    {
+	    itemName.text = name;
+	    itemDescription.text = description;
+    }
+
+    void Update()
 	{
-		DoubleClicking();
+		//DoubleClicking();
 	}
 
 	public void DoubleClicking()
@@ -49,8 +63,8 @@ public class DoubleClickDebug : MonoBehaviour
 
 			if (timeSinceLastClick <= DOUBLE_CLICK_TIME)
 			{
-				DoubleClickEquip();
-				DoubleClickCons();
+				
+				Debug.Log("Double Clicked Item");
 			}
 
 			lastClickTime = Time.time;
@@ -59,61 +73,11 @@ public class DoubleClickDebug : MonoBehaviour
 
 	}
 
-	private void DoubleClickEquip() 
-	{
-
-		if (diamondSword)
-		{
-			itemName.text = (diamondSword.diamondSwordData.displayName);
-			itemDescription.text = (diamondSword.diamondSwordData.itemDescription);
-
-			Debug.Log("Item Double Click Test");
-		
-		}
-		else if (crossbow)
-		{
-			itemName.text = (crossbow.crossbowData.displayName);
-			itemDescription.text = (crossbow.crossbowData.itemDescription);
-
-		
-		} 
-		else if (diamondPickaxe)
-		{
-			itemName.text = (diamondPickaxe.pickaxeData.displayName);
-			itemDescription.text = (diamondPickaxe.pickaxeData.itemDescription);
-		
-		}
-		else if (leatherArmor)
-		{
-			itemName.text = (leatherArmor.leatherArmorData.displayName);
-			itemDescription.text = (leatherArmor.leatherArmorData.itemDescription);
-		
-		}
-		else if (goldBoots)
-		{
-			itemName.text = (goldBoots.goldBootsData.displayName);
-			itemDescription.text = (goldBoots.goldBootsData.itemDescription);
-		
-		}
-
-		Debug.Log("Double clicked on an equipment");
-		
-	}
-
-	private void DoubleClickCons() 
-	{
-		itemName.text = (chickenHPRegen.chickenData.displayName);
-		itemDescription.text = (chickenHPRegen.chickenData.itemDescription);
-		
-		Debug.Log("Double clicked on a consumable");
-
-		chickenHPRegen.Consume();
-	}
-
-	private void DoubleClickMisc()
-	{
-		
-		Debug.Log("Double clicked on a misc item");
-	}
-
+	// itemName.text = (chickenHPRegen.chickenData.displayName);
+	// itemDescription.text = (chickenHPRegen.chickenData.itemDescription);
+	//
+	// Debug.Log("Double clicked on a consumable");
+	//
+	// chickenHPRegen.Consume();
+	
 }
