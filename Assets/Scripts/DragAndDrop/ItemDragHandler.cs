@@ -60,7 +60,10 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             switch (parent.Item.itemData.Type)
             {
                 case ItemType.Consumables:
-                    //you can do something consume heree
+                     itemName = parent.Item.itemData.displayName;
+                     itemDesc = parent.Item.itemData.itemDescription;
+
+                     break;
                 case ItemType.Equipment:
                      itemName = parent.Item.itemData.displayName;
                      itemDesc = parent.Item.itemData.itemDescription;

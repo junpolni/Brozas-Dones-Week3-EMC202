@@ -227,6 +227,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 0}
   parentAfterDrag: {fileID: 0}
+  chickenHPRegen: {fileID: 4412385413596760551, guid: 7b073e1aa04c0c94ab3ec554a94790b2, type: 3}
+  cookieRESIncrease: {fileID: 137682026548758739, guid: 2dee9da49693c984d870bf8f3ff297a7, type: 3}
+  redPotionATKBuff: {fileID: 3001395877502124687, guid: 87182b04581da9048b6a7b748e4e54c9, type: 3}
+  watermelonHPRegen: {fileID: 3206802025022713146, guid: 754b90931ab578d4eb9a65ce801893f3, type: 3}
+  grayPotionCRBuff: {fileID: 950110245590564521, guid: 8de476d863253f04286ff1a3d60b5f7a, type: 3}
 --- !u!1 &4402011953213026822
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,6 +347,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 4548523662647027604}
   stackText: {fileID: 1557460946255171731}
+  Item:
+    itemData: {fileID: 0}
+    stackSize: 0
 --- !u!114 &1940920116919103635
 MonoBehaviour:
   m_ObjectHideFlags: 0
