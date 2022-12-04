@@ -15,5 +15,6 @@ public class DiamondSword : MonoBehaviour, ICollectible
         UnityEngine.Debug.Log("You picked up a Diamond Sword.");
         OnDiamondSwordCollected?.Invoke(diamondSwordData);
     }
+
     
 }
