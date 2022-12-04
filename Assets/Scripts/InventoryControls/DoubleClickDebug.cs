@@ -50,6 +50,7 @@ public class DoubleClickDebug : MonoBehaviour
 			if (timeSinceLastClick <= DOUBLE_CLICK_TIME)
 			{
 				DoubleClickEquip();
+				DoubleClickCons();
 			}
 
 			lastClickTime = Time.time;
@@ -101,11 +102,17 @@ public class DoubleClickDebug : MonoBehaviour
 
 	private void DoubleClickCons() 
 	{
-		Debug.Log("Double clicked on a consumable item");
+		itemName.text = (chickenHPRegen.chickenData.displayName);
+		itemDescription.text = (chickenHPRegen.chickenData.itemDescription);
+		
+		Debug.Log("Double clicked on a consumable");
+
+		chickenHPRegen.Consume();
 	}
 
 	private void DoubleClickMisc()
 	{
+		
 		Debug.Log("Double clicked on a misc item");
 	}
 

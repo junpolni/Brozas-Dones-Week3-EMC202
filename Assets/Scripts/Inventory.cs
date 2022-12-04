@@ -13,26 +13,34 @@ public class Inventory : MonoBehaviour
 
     private void OnEnable()
     {
-        // Equipments
+        // Equipments Collect
         DiamondSword.OnDiamondSwordCollected += AddNonStack;
         Crossbow.OnCrossbowCollected += AddNonStack;
         DiamondPickaxe.OnPickaxeCollected += AddNonStack;
         LeatherArmor.OnLeatherArmorCollected += AddNonStack;
         GoldBoots.OnGoldBootsCollected += AddNonStack;
 
-        // Consumables
+        // Consumables Collect
         Chicken_HPRegen.OnChickenCollected += Add;
         Cookie_RESIncrease.OnCookieCollected += Add;
         RedPotion_ATKBuff.OnRedPotionCollected += Add;
         Watermelon_HPRegen.OnWatermelonCollected += Add;
         GrayPotion_CRBuff.OnGrayPotionCollected += Add;
 
-        // Misc
+        // Misc Collect
         BrownBook.OnBrownBookCollected += AddNonStack;
         Painting.OnPaintingCollected += AddNonStack;
         Sign.OnSignCollected += AddNonStack;
         Disc.OnDiscCollected += AddNonStack;
         FlowerPot.OnFlowerPotCollected += AddNonStack;
+
+        // Consume Items
+        Chicken_HPRegen.OnChickenConsumed += Remove;
+        Cookie_RESIncrease.OnCookieConsumed += Remove;
+        RedPotion_ATKBuff.OnRedPotionConsumed += Remove;
+        Watermelon_HPRegen.OnWatermelonConsumed += Remove;
+        GrayPotion_CRBuff.OnGrayPotionConsumed += Remove;
+        
 
     }
     
