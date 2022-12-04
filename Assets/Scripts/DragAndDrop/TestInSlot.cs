@@ -7,18 +7,19 @@ public class TestInSlot : MonoBehaviour, IDropHandler
 {
     public void OnDrop(PointerEventData eventData)
     {
-        Transform parentAfterSwap;
-        GameObject dropped = eventData.pointerDrag;
-        DragDrop draggableItem = dropped.GetComponent<DragDrop>();
-        if (transform.childCount== 0)
+        if (transform.childCount == 1)
         {
+            GameObject dropped = eventData.pointerDrag;
+            ItemDragHandler draggableItem = dropped.GetComponent<ItemDragHandler>();
+            Transform tempDragItemParent = draggableItem.parentAfterDrag;
             draggableItem.parentAfterDrag = transform;
+
+            Transform currentIconObj = transform.GetChild(0);
+            currentIconObj.transform.SetParent(tempDragItemParent.transform, false);
+            
         }
-        else
-        {
-            parentAfterSwap = draggableItem.parentAfterDrag;
-            transform.GetChild(0).SetParent(parentAfterSwap);
-            draggableItem.parentAfterDrag = transform;
-        }
+
+        Debug.Log("Test Drop");
+        
     }
 }

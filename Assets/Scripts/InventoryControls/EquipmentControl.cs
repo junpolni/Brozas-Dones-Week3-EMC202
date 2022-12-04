@@ -11,11 +11,6 @@ public class EquipmentControl : MonoBehaviour
     [SerializeField] private LeatherArmor leatherArmor;
     [SerializeField] private GoldBoots goldBoots;
 
-    void Start()
-    {
-        Debug.Log("Inventory");
-    }
-
     public void AddDiamondSword()
     {
         //DiamondSword newDiamondSword = Instantiate(diamondSword);
